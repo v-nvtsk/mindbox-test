@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+  },
+  "include": [
+    "vite.config.ts",
+    "eslint.config.js",
+    "stylelint.config.cjs",
+    "lint-staged.config.cjs"
+  ],
+}

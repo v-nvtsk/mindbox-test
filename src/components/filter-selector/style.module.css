@@ -1,0 +1,25 @@
+.tabSelector {
+  display: flex;
+  border: none;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.tab {
+  font-size: 1em;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid rgb(112, 112, 112);
+  border-radius: 5px;
+  color: rgb(112, 112, 112);
+  margin-right: 20px;
+}
+
+.tab:last-of-type {
+  margin-right: 0;
+}
+
+.tabActive {
+  background-color: rgba(163, 163, 163, 0.5);
+  color: white;
+}
