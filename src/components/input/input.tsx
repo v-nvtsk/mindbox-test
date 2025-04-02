@@ -15,12 +15,12 @@ export function TextInputWithButton({ buttonText, onButtonClick }: TextInputWith
 
   const handleButtonClick = () => {
     onButtonClick(inputValue)
+    setInputValue('')
   }
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       handleButtonClick()
-      setInputValue('')
     }
   }
 

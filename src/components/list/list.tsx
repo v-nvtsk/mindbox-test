@@ -25,16 +25,27 @@ export function TaskList() {
   }, [])
 
   const itemsLeft = tasks.filter(task => task.state === TaskState.active).length
+  const hasCompleteTasks = tasks.some(task => task.state === TaskState.complete)
 
   return (
     <div className={styles.list}>
       <TextInputWithButton buttonText="Add task" onButtonClick={addTask} />
       <ul>
         {filteredTasks.map(task => (
-          <ListItem key={task.id} task={task} clickHandler={() => toggleItemState(task.id)} />
+          <ListItem
+            key={task.id}
+            task={task}
+            clickHandler={() => toggleItemState(task.id)}
+          />
         ))}
       </ul>
-      <ListFooter itemsLeft={itemsLeft} clearCompleted={clearCompleted} activeFilter={activeFilter} changeFilter={changeFilter} />
+      <ListFooter
+        itemsLeft={itemsLeft}
+        hasCompleteTasks={hasCompleteTasks}
+        clearCompleted={clearCompleted}
+        activeFilter={activeFilter}
+        changeFilter={changeFilter}
+      />
     </div>
   )
 }

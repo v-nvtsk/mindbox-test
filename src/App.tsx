@@ -1,4 +1,3 @@
-// App.tsx
 import { TaskList } from '$components/list'
 import { TasksProvider } from './store'
 
